@@ -1,16 +1,44 @@
 # meal_quest
 
-A new Flutter project.
+## Restaurant App
+A feature-rich restaurant app designed and developed as a collaborative team project. This project demonstrates modern app development practices, effective teamwork, and the implementation of industry-standard tools and techniques.
+## Key Features
+Team Collaboration :
 
-## Getting Started
+Tasks were effectively distributed among team members, leveraging Agile principles to ensure smooth coordination and delivery.
+Enhanced team communication and problem-solving skills during development.
 
-This project is a starting point for a Flutter application.
+Clean Architecture:
 
-A few resources to get you started if this is your first Flutter project:
+The project follows Clean Architecture, promoting modularity, scalability, and maintainability.
+Business logic is separated from the UI, ensuring testable and reusable components.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+API Integration with Dio:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+API interactions are efficiently handled using the Dio library, ensuring fast and reliable network calls.
+Includes error handling, response parsing, and seamless communication with backend services.
+
+Authentication with Firebase :
+
+User authentication is implemented using Firebase Authentication, ensuring secure login and registration functionalities.
+
+Enhanced UI/UX Design Skills:
+
+Focused on building a user-friendly and visually appealing interface.
+Leveraged modern UI libraries and custom widgets for a seamless user experience.
+## Core Functionalities
+User Authentication :
+
+Login, Registration, and Logout with Firebase.
+Menu Management:
+
+Browse, search, and filter restaurant menus.
+Order Placement :
+
+Add items to the cart and place orders with real-time feedback.
+## Future Enhancements
+
+Add payment gateway integration for online payments.
+Implement a loyalty rewards system for users.
+Include multi-language support for a wider audience
+
