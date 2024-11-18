@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
 
+import 'core/routes/app_router.dart';
+
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+
+  runApp(const MealQuestApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MealQuestApp extends StatelessWidget {
+  const MealQuestApp({super.key});
 
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-     debugShowCheckedModeBanner: false,
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      routerConfig:router ,
     );
   }
 }
