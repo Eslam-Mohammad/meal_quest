@@ -6,6 +6,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();//
 
   runApp(const MealQuestApp());
+  print("ahmed");
 }
 
 class MealQuestApp extends StatelessWidget {
