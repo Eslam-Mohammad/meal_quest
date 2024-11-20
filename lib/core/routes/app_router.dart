@@ -1,6 +1,7 @@
 
 
 import 'package:go_router/go_router.dart';
+import 'package:meal_quest/features/boarding/presentation/views/boarding_view.dart';
 import 'package:meal_quest/features/splash/presentation/views/splash_view.dart';
 
 abstract class AppRouter{
@@ -17,11 +18,10 @@ abstract class AppRouter{
         builder: (context, state) => const SplashView(),
 
       ),
-      // GoRoute(
-      //   path: kOnBoardingView,
-      //   builder: (context, state) =>  const OnBoardingView(),
-      //
-      // ),
+      GoRoute(
+        path: kOnBoardingView,
+        builder: (context, state) =>  const BoardingView(),
+      ),
       //
       // GoRoute(
       //   path: kSignUpView,
