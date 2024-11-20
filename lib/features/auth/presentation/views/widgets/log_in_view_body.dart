@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:meal_quest/core/constants/app_colors.dart';
+import 'package:go_router/go_router.dart';
 import 'package:meal_quest/core/constants/app_text_styles.dart';
+import 'package:meal_quest/core/routes/app_router.dart';
 import 'package:meal_quest/core/utils/widgets/custom_button.dart';
 import 'package:meal_quest/features/auth/presentation/views/widgets/custom_email_text_field.dart';
 import 'package:meal_quest/features/auth/presentation/views/widgets/custom_password_text_field.dart';
@@ -16,7 +17,6 @@ class LogInViewBody extends StatefulWidget {
 class _LogInViewBodyState extends State<LogInViewBody> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
-  final _confirmPasswordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   bool _passwordVisible = true;
   @override
@@ -60,9 +60,11 @@ class _LogInViewBodyState extends State<LogInViewBody> {
 
                SizedBox(height: 24.h),
               NavigationLoginOrSignUp(
-                textButton: "Login",
-                textMessage: "Already have an account?",
-                onPressed: (){},
+                textButton: "Sign Up",
+                textMessage: "Doesn’t have an account?",
+                onPressed: (){
+                  GoRouter.of(context).push(AppRouter.kSignUpView);
+                },
               )
             ],
           ),
@@ -75,7 +77,7 @@ class _LogInViewBodyState extends State<LogInViewBody> {
   void dispose() {
     _emailController.dispose();
     _passwordController.dispose();
-    _confirmPasswordController.dispose();
+
     super.dispose();
   }
 }
