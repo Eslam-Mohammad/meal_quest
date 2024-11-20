@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meal_quest/core/constants/app_colors.dart';
 class NavigationButton extends StatelessWidget {
   final bool isLastPage;
   final VoidCallback onNext;
@@ -15,7 +16,7 @@ class NavigationButton extends StatelessWidget {
       onPressed: onNext,
       style: ElevatedButton.styleFrom(
         padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
-        backgroundColor: const Color(0xff008C8C),
+        backgroundColor: AppColors.backGroundButton
       ),
       child: Text(
         isLastPage ? "Get Start" : "Next",

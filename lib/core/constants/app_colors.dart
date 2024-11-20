@@ -8,6 +8,7 @@ abstract class AppColors {
   static const Color fontSecondaryColor = Color(0xFF6B4B3E);
   static const Color fontThirdColor = Color(0xFF6F6460);
   static const Color fontFourthColorLightGrey = Color(0xFFA7A7A7);
+  static const Color backGroundButton = Color(0xff008C8C);
 
 
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meal_quest/core/constants/app_colors.dart';
 class CustomIndicatorList extends StatelessWidget {
   final int currentIndex;
   final int totalCount;
@@ -20,7 +21,7 @@ class CustomIndicatorList extends StatelessWidget {
             height: 8,
             margin: const EdgeInsets.symmetric(horizontal:10),
             decoration: BoxDecoration(
-              color: currentIndex == index ? const Color(0xff008C8C) : Colors.grey.shade300,
+              color: currentIndex == index ? AppColors.backGroundButton : Colors.grey.shade300,
               borderRadius: BorderRadius.circular(4),
             ),
           ),

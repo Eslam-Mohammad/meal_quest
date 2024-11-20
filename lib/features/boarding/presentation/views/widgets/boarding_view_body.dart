@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:meal_quest/core/routes/app_router.dart';
 import 'package:meal_quest/features/boarding/presentation/models/onboarding_model.dart';
 import 'package:meal_quest/features/boarding/presentation/views/widgets/custom_indicator_list.dart';
 import 'package:meal_quest/features/boarding/presentation/views/widgets/navigation_button.dart';
@@ -52,7 +54,7 @@ class _BoardingViewBodyState extends State<BoardingViewBody> {
                   isLastPage: _currentIndex == onboardingPages.length - 1,
                   onNext: () {
                     if (_currentIndex == onboardingPages.length - 1) {
-                      // Navigate to home screen
+                      GoRouter.of(context).push(AppRouter.kLogInView);
 
                     } else {
                       _controller.nextPage(
