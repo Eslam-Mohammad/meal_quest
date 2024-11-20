@@ -13,7 +13,7 @@ import 'package:meal_quest/main.dart';
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MealQuestApp());
+    await tester.pumpWidget( MealQuestApp());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
