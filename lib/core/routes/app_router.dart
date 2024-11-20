@@ -1,17 +1,43 @@
 
-// make string variables to carry name of paths like "/home" so when you change it change in one place
+
 import 'package:go_router/go_router.dart';
+import 'package:meal_quest/features/splash/presentation/views/splash_view.dart';
 
-const String homePath = "/home";
-const String onBoardingPath = "/";
-const String loginPath = "/login";
-const String signUpPath = "/signup";
-const String resetPasswordPath = "/resetPassword";
+abstract class AppRouter{
+  static const kSplashView='/splashView';
+  static const kOnBoardingView='/onBoardingView';
+  static const kSignUpView='/signUpView';
+  static const kLogInView='/logInView';
+  static const kHomeView = '/homeView';
 
+  static final router = GoRouter(
+    routes: [
+      GoRoute(
+        path: '/',
+        builder: (context, state) => const SplashView(),
 
-final GoRouter router = GoRouter(
-  routes: [
-
-  ],
-
-);
+      ),
+      // GoRoute(
+      //   path: kOnBoardingView,
+      //   builder: (context, state) =>  const OnBoardingView(),
+      //
+      // ),
+      //
+      // GoRoute(
+      //   path: kSignUpView,
+      //   builder: (context, state) =>  const SignUpView(),
+      //
+      // ),
+      // GoRoute(
+      //   path: kLogInView,
+      //   builder: (context, state) =>  const LogInView(),
+      //
+      // ),
+      // GoRoute(
+      //   path: kHomeView,
+      //   builder: (context, state) => const HomeView(),
+      // ),
+      //
+    ],
+  );
+}
