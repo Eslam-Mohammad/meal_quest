@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meal_quest/core/constants/app_colors.dart';
 
-import 'custom_text_form_field_widget.dart';
+import '../../../../../core/utils/widgets/custom_text_form_field_widget.dart';
 class PasswordField extends StatelessWidget {
   final TextEditingController passwordController;
   final bool visible;

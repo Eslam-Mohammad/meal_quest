@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meal_quest/core/constants/app_colors.dart';
 import 'package:meal_quest/core/constants/app_text_styles.dart';
 
@@ -16,7 +15,9 @@ class CustomTextField extends StatelessWidget {
     this.filled,
     this.fillColor,
     this.hintText,
-    this.padding =EdgeInsets.zero,
+    this.padding = EdgeInsets.zero,
+    this.contentPadding,
+    this.hintStyle,
   });
   final void Function(String?)? onSaved;
   final void Function(String?)? onChange;
@@ -28,7 +29,9 @@ class CustomTextField extends StatelessWidget {
   final TextEditingController? controller;
   final Color? fillColor;
   final String? hintText;
+  final TextStyle? hintStyle;
   final EdgeInsets padding;
+  final EdgeInsetsGeometry? contentPadding;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -45,17 +48,19 @@ class CustomTextField extends StatelessWidget {
               prefixIcon: prefixIcon,
               prefixIconColor: AppColors.backGroundButton,
               hintText: hintText,
+
               suffixIcon: suffixIcon,
-              hintStyle: AppTextStyles.style16Regular
+              contentPadding: contentPadding,
+              hintStyle:hintStyle?? AppTextStyles.style16Regular
                   .copyWith(color: const Color(0xffB3B3B3)),
               enabledBorder: OutlineInputBorder(
                   borderSide:
-                      const BorderSide(color: Color(0xffB3B3B3), width: 1.2),
+                      const BorderSide(color: Color(0xffB3B3B3), width: 1.2,),
                   borderRadius: BorderRadius.circular(6)),
               focusedBorder: buildBorder(AppColors.backGroundButton),
               errorBorder: buildBorder(Colors.red),
               focusedErrorBorder: buildBorder(Colors.red),
-              border: const OutlineInputBorder())),
+              border: const OutlineInputBorder(),),),
     );
   }
 
