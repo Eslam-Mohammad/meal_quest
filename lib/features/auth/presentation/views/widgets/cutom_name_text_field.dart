@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meal_quest/features/auth/presentation/views/widgets/custom_text_form_field_widget.dart';
+import 'package:meal_quest/core/utils/widgets/custom_text_form_field_widget.dart';
 class NameField extends StatelessWidget {
   final TextEditingController nameController;
 
